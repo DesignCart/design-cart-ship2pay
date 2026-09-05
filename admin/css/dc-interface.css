@@ -1,0 +1,23 @@
+/**
+ * Design Cart Ship2pay
+ *
+ * Firma: Design Cart
+ * Url firmy: https://www.designcart.pl
+ * Autor: Paweł Nosko
+ * Url autora: https://www.designcart.pl/pawel-nosko.html
+ */
+
+/**
+ * DC Interface — główny plik CSS
+ * Importuj ten jeden plik w modułach OpenCart.
+ */
+
+@import url("dc-tokens.css");
+@import url("dc-hero.css");
+@import url("dc-layout.css");
+@import url("dc-tabs.css");
+@import url("dc-accordion.css");
+@import url("dc-switch.css");
+@import url("dc-dimension.css");
+@import url("dc-forms.css");
+@import url("dc-colorpicker.css");

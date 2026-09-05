@@ -1,0 +1,275 @@
+/**
+ * Design Cart Ship2pay
+ *
+ * Firma: Design Cart
+ * Url firmy: https://www.designcart.pl
+ * Autor: Paweł Nosko
+ * Url autora: https://www.designcart.pl/pawel-nosko.html
+ */
+
+/* WP admin shell — full-bleed DC Interface page */
+body.woocommerce_page_dc-ship2pay #wpcontent {
+  padding-left: 0;
+}
+
+body.woocommerce_page_dc-ship2pay #wpbody-content {
+  padding-bottom: 0;
+}
+
+body.woocommerce_page_dc-ship2pay .wrap.dc-ship2pay-admin-wrap {
+  margin: 0;
+  max-width: none;
+}
+
+body.woocommerce_page_dc-ship2pay .wrap.dc-ship2pay-admin-wrap > h1,
+body.woocommerce_page_dc-ship2pay .wrap.dc-ship2pay-admin-wrap > p {
+  display: none;
+}
+
+.dc-ship2pay-admin-page {
+  min-height: calc(100vh - 32px);
+  background:
+    radial-gradient(ellipse 80% 50% at 10% -10%, rgba(31, 162, 140, 0.14), transparent 55%),
+    radial-gradient(ellipse 60% 40% at 95% 0%, rgba(28, 167, 202, 0.12), transparent 50%),
+    linear-gradient(180deg, #eef4f3 0%, #f1f5f9 100%);
+  padding-bottom: 3rem;
+}
+
+.dc-ship2pay-admin-page .dc-page__wrap {
+  padding-bottom: 2rem;
+}
+
+.dc-ship2pay-admin-page .notice {
+  margin: 1rem 1.5rem 0;
+  border-radius: 12px;
+}
+
+.dc-ship2pay-admin-page a.dc-btn {
+  text-decoration: none;
+}
+
+.dc-ship2pay-admin-page .dc-hero .dc-btn--light {
+  color: var(--dc-brand-deep, #0d6b5c);
+}
+
+.dc-ship2pay-admin-page .dc-hero .dc-btn--ghost {
+  color: #fff;
+}
+
+.dc-ship2pay-admin-page .dc-btn {
+  height: auto;
+  line-height: 1.2;
+  min-height: 0;
+}
+
+.dc-ship2pay-master {
+  font-weight: 700;
+}
+
+.dc-ship2pay-grid {
+  display: grid;
+  grid-template-columns: minmax(240px, 34%) minmax(0, 1fr);
+  gap: 1rem;
+  min-height: 420px;
+}
+
+.dc-ship2pay-col {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  background: #fff;
+  border: 1px solid var(--dc-line, rgba(15, 23, 42, 0.08));
+  border-radius: var(--dc-radius-sm, 12px);
+  overflow: hidden;
+}
+
+.dc-ship2pay-col__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.9rem 1.1rem;
+  border-bottom: 1px solid var(--dc-line, rgba(15, 23, 42, 0.08));
+  background: linear-gradient(145deg, #fafcfd 0%, #f8fafc 100%);
+}
+
+.dc-ship2pay-col__title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--dc-brand, #1fa28c);
+}
+
+.dc-ship2pay-col__meta {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--dc-muted, #64748b);
+  background: var(--dc-surface-2, #f1f5f9);
+  border-radius: 999px;
+  padding: 0.15rem 0.55rem;
+}
+
+.dc-ship2pay-col__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.dc-ship2pay-col__actions .dc-btn {
+  padding: 0.35rem 0.7rem;
+  font-size: 12px;
+  color: var(--dc-brand-deep, #0d6b5c);
+  background: #fff;
+  border: 1px solid var(--dc-line, rgba(15, 23, 42, 0.12));
+}
+
+.dc-ship2pay-col__body {
+  overflow: auto;
+  padding: 0.75rem;
+  flex: 1;
+}
+
+.dc-ship2pay-zone {
+  margin: 0.65rem 0.35rem 0.4rem;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--dc-muted, #64748b);
+}
+
+.dc-ship2pay-zone:first-child {
+  margin-top: 0.15rem;
+}
+
+.dc-ship2pay-ship {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.65rem;
+  width: 100%;
+  margin: 0 0 0.4rem;
+  padding: 0.75rem 0.85rem;
+  border: 1px solid var(--dc-line, rgba(15, 23, 42, 0.08));
+  border-radius: 12px;
+  background: #fff;
+  text-align: left;
+  cursor: pointer;
+  color: var(--dc-ink, #0f172a);
+  transition: border-color 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+.dc-ship2pay-ship:hover {
+  border-color: rgba(31, 162, 140, 0.4);
+}
+
+.dc-ship2pay-ship.is-active {
+  border-color: var(--dc-brand, #1fa28c);
+  background: linear-gradient(135deg, rgba(31, 162, 140, 0.12) 0%, rgba(28, 167, 202, 0.08) 100%);
+  box-shadow: 0 0 0 1px rgba(31, 162, 140, 0.12);
+}
+
+.dc-ship2pay-ship.is-disabled .dc-ship2pay-ship__name {
+  opacity: 0.7;
+}
+
+.dc-ship2pay-ship__name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.dc-ship2pay-ship__meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex-shrink: 0;
+}
+
+.dc-ship2pay-count {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--dc-brand, #1fa28c);
+  background: rgba(31, 162, 140, 0.12);
+  border-radius: 999px;
+  padding: 0.15rem 0.5rem;
+}
+
+.dc-ship2pay-pill {
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  padding: 0.12rem 0.4rem;
+}
+
+.dc-ship2pay-pill--off {
+  color: #b45309;
+  background: rgba(217, 119, 6, 0.12);
+}
+
+.dc-ship2pay-panel[hidden] {
+  display: none !important;
+}
+
+.dc-ship2pay-panel__lead {
+  margin: 0 0 0.85rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--dc-muted, #64748b);
+}
+
+.dc-ship2pay-pays {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.dc-ship2pay-pay {
+  margin: 0;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid var(--dc-line, rgba(15, 23, 42, 0.08));
+  border-radius: 12px;
+  background: linear-gradient(145deg, #fafcfd 0%, #fff 100%);
+}
+
+.dc-ship2pay-pay .dc-toggle {
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.dc-ship2pay-pay__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.dc-ship2pay-pay__text strong {
+  font-size: 0.95rem;
+  color: var(--dc-ink, #0f172a);
+}
+
+.dc-ship2pay-pay__text small {
+  font-size: 0.75rem;
+  color: var(--dc-muted, #64748b);
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .dc-ship2pay-grid {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .dc-ship2pay-col--shipping .dc-ship2pay-col__body {
+    max-height: 280px;
+  }
+}

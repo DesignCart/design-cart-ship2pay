@@ -11,7 +11,7 @@
 <h2>Links</h2>
 <ul>
   <li><strong>Download (Design Cart):</strong> <a href="https://www.designcart.pl/laboratorium/362-jak-w-woocommerce-uzaleznic-metody-platnosci-od-wybranej-metody-wysylki.html">https://www.designcart.pl/laboratorium/362-jak-w-woocommerce-uzaleznic-metody-platnosci-od-wybranej-metody-wysylki.html</a></li>
-  <li><strong>GitHub:</strong> <a href="">[add repository URL]</a></li>
+
   <li><strong>Documentation / article:</strong> <a href="https://www.designcart.pl/laboratorium/362-jak-w-woocommerce-uzaleznic-metody-platnosci-od-wybranej-metody-wysylki.html">https://www.designcart.pl/laboratorium/362-jak-w-woocommerce-uzaleznic-metody-platnosci-od-wybranej-metody-wysylki.html</a></li>
   <li><strong>Author — Paweł Nosko:</strong> <a href="https://www.designcart.pl/pawel-nosko.html">https://www.designcart.pl/pawel-nosko.html</a></li>
   <li><strong>Studio — Design Cart:</strong> <a href="https://www.designcart.pl/">https://www.designcart.pl/</a></li>
